@@ -1,0 +1,281 @@
+.bg-black {
+  background-color: #000000d5 !important;
+  background-size: cover !important;
+}
+.body {
+  padding: 0 !important;
+  margin: 0 !important;
+  background-image: url("images/fondo.jpg");
+  background-size: cover !important;
+  background-color: #000000d5 !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  width: 100% !important;
+}
+body {
+  padding: 0 !important;
+  margin: 0 !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  width: 100% !important;
+}
+.nav-pills .nav-item {
+  width: 50% !important;
+  font-weight: 600 !important;
+  font-size: 18px !important;
+  border-radius: 0 !important;
+  color: #000000 !important;
+}
+.nav-pills .nav-item a {
+  color: #000000 !important;
+}
+.nav-pills .nav-item a:hover {
+  color: #e4bd30 !important;
+  border-bottom: 3px solid #e4bd30;
+  border-radius: 0 !important;
+}
+.nav-pills .nav-item .active {
+  background-color: #ffffff;
+  color: #e4bd30 !important;
+
+  border-bottom: 3px solid #e4bd30;
+  border-radius: 0 !important;
+}
+a {
+  color: #ffffff !important;
+}
+.btn-main {
+  color: #ffffff !important;
+  border: 3px solid #e4bd30 !important;
+  font-weight: bold;
+  background-color: #e4bd30;
+  border-radius: 7px;
+}
+.bg-white {
+  background-color: #ffffff !important;
+}
+.border-main {
+  border: 2px solid #e4bd30 !important;
+}
+.form-control {
+}
+.color-main {
+  color: #e4bd30 !important;
+}
+.color-secondery {
+  color: #29c59e !important;
+}
+.rounded-lg {
+  border-radius: 15px !important;
+}
+.a-black {
+  color: #000000 !important;
+}
+.hr {
+  background-color: #e4bd30 !important;
+  height: 2px !important;
+  margin-top: 100px !important;
+  margin-bottom: 100px !important;
+
+  width: 15% !important;
+}
+.about-img {
+  border-radius: 50% !important;
+  border: 3px solid #e4bd30 !important;
+}
+.circeld-avatar {
+  border-radius: 50% !important;
+}
+.mt-per {
+  margin-top: 13% !important;
+}
+.h-600 {
+  height: 600px !important;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  background-color: #5a5a5a8e;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 1000;
+}
+
+
+.navbar-nav .nav-item a:hover {
+  color: #e4bd30 !important;
+  border-bottom: 1px solid #e4bd30 !important;
+}
+.navbar-nav .nav-item a {
+  font-size: 18px !important;
+  border-bottom: 1px solid #00000000 !important;
+  transition: color 0.3s !important;
+  transition: border 0.3s !important;
+}
+.navbar-nav .nav-item a:focus {
+  color: #e4bd30 !important;
+  border-bottom: 1px solid #e4bd30 !important;
+}
+.bg-main {
+  background-color: #e4bd30 !important;
+}
+.overflow {
+  overflow-y: auto;
+  height: 400px !important;
+}
+.bg-main-trans {
+  background-color: #e4bd3085 !important;
+}
+.bg-grey {
+  background-color: #f5e5c87a;
+}
+::placeholder {
+  font-size: 13px !important;
+}
+.border_secendery {
+  border-bottom: 4px solid #29c59e !important;
+}
+.navbar {
+  position: fixed; /* Esto hace que la barra se quede fija en la parte superior */
+  top: 0;
+  left: 0;
+  width: 100%; /* Esto asegura que la barra ocupe todo el ancho */
+  z-index: 1000; /* Para asegurarse de que la barra esté por encima de otros elementos */
+}
+
+.navbar .navbar-brand, .navbar-nav {
+  width: 100%; /* Asegura que los elementos dentro del navbar también ocupen todo el ancho */
+}
+
+.navbar-toggler {
+  margin-left: auto; /* Asegura que el botón de menú se alinee correctamente */
+}
+
+body {
+  padding-top: 60px; /* Asegura que el contenido no quede debajo de la navbar fija */
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.1);
+}
+
+.portfolio-item .description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  padding: 1rem;
+}
+
+.portfolio-item:hover .description {
+  opacity: 1;
+}
+
+/* Estilo para la cuadrícula de portada */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img
+
+/* Estilos para hacer que cada sección ocupe toda la página */
+.min-vh-100 {
+  min-height: 100vh;
+}
+
+.min-vh-50 {
+  min-height: 50vh;
+}
+
+
+
+/* Estilo para la cuadrícula de trabajos */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+
+  body {
+  margin-top: 80px; /* Ajusta este valor para que la página comience justo después del navbar */
+}
+
+.navbar {
+  position: fixed; /* Fija la barra de navegación */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Asegura que la barra esté encima del contenido */
+}
+
+
+
+@media screen and (max-width: 541px) {
+  h1 {
+    font-size: 25px !important;
+    line-height: 45px !important;
+  }
+  .h3 {
+    font-size: 20px !important;
+  }
+}
+@media screen and (max-width: 769px) {
+  .nav-link:first-child {
+    margin-top: 30px;
+  }
+  li {
+    border-bottom: 1px solid rgb(214, 212, 212) !important;
+    padding-right: 0 !important;
+    padding-bottom: 10px !important;
+  }
+  
+}
