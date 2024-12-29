@@ -13,7 +13,7 @@
 <p align="center"> <b>
 <a href="#about"> About </a> • 
 <a href="#content"> Content </a>  • 
-<a href="#project"> Project </a>  • 
+<a href="#project"> Project </a> 
 </b> </p> 
 
 <!-- INTRO: repository description -->
