@@ -528,7 +528,7 @@ p {
 }
 
 .cart-modal-content .btn {
-    background-color: #7c7d7d;
+    background-color: #03591f;
     color: white;
     padding: 10px;
     border: none;
@@ -538,7 +538,7 @@ p {
 }
 
 .cart-modal-content .btn:hover {
-    background-color: #242424;
+    background-color: #47b318;
 }
 
 .cart-modal-content .close-btn {
@@ -552,6 +552,50 @@ p {
     color: #222;
 }
 
+.close-cart-btn {
+    background-color: #7f7f7f;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.close-cart-btn:hover {
+    background-color: #444343;
+}
+
+.close-cart-btn:active {
+    background-color: #050202;
+}
+
+.close-cart-btn:focus {
+    outline: none;
+}
+
+.clear-cart-btn {
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.clear-cart-btn:hover {
+    background-color: #d32f2f; 
+}
+
+.clear-cart-btn:active {
+    background-color: #b71c1c;
+}
+
+.clear-cart-btn:focus {
+    outline: none;
+}
+
 @media screen and (max-width: 768px) {
     .cart-modal-content {
         width: 90%;  /* En pantallas medianas, el modal será más pequeño */
@@ -563,8 +607,6 @@ p {
         width: 95%; /* Para pantallas pequeñas */
     }
 }
-
-
 
 /* Contact Section */
 #contact .contact {

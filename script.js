@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const totalPriceElement = document.getElementById("total-price");
     const checkoutButton = document.getElementById("checkout-button");
     const closeCartButton = document.getElementById("close-cart");
-    const viewCartButton = document.getElementById("view-cart"); // Nuevo botón "Ver carrito"
+    const clearCartButton = document.getElementById("clear-cart"); // Botón para limpiar el carrito
 
     // Función para cargar productos desde la API
     async function loadProducts() {
@@ -111,23 +111,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Función para actualizar el carrito en la vista
-    function updateCart(productIds = []) {
+    function updateCart() {
         const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
         cartItemsContainer.innerHTML = ""; // Limpiar el carrito
         let totalPrice = 0;
 
-        // Si no se proporcionan IDs de productos, mostramos todos los productos del carrito
-        const filteredItems = productIds.length === 0 ? cartItems : cartItems.filter(item => productIds.includes(item.id));
-
-        // Verificar que hay productos en el carrito
-        if (filteredItems.length === 0) {
+        // Si no hay productos, mostramos un mensaje
+        if (cartItems.length === 0) {
             cartItemsContainer.innerHTML = "<p>El carrito está vacío.</p>";
             totalPriceElement.textContent = "0.00";
             return;
         }
 
         // Mostrar los elementos del carrito
-        filteredItems.forEach(item => {
+        cartItems.forEach(item => {
             if (!item.price || !item.title || !item.quantity || !item.image) {
                 console.error("Producto con datos faltantes en el carrito", item);
                 return;
@@ -154,16 +151,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Función para abrir el carrito
     function openCart() {
-        cartModal.style.display = "flex";
+        cartModal.style.display = "flex"; // Aseguramos que el carrito se muestre
     }
 
     // Función para cerrar el carrito
     function closeCart() {
-        cartModal.style.display = "none";
+        cartModal.style.display = "none"; // Ocultar el carrito
+    }
+
+    // Función para limpiar el carrito
+    function clearCart() {
+        localStorage.removeItem("cart"); // Elimina los productos del carrito en localStorage
+        updateCart(); // Actualiza la vista para reflejar que el carrito está vacío
     }
 
     // Mostrar el carrito al cargar la página
-    updateCart();
     loadProducts();
 
     // Botón para abrir el carrito
@@ -175,11 +177,8 @@ document.addEventListener("DOMContentLoaded", function () {
     // Botón para cerrar el carrito
     closeCartButton.addEventListener("click", closeCart);
 
-	// Botón para ver el carrito dentro del modal
-	viewCartButton.addEventListener("click", function() {
-		updateCart(); // Aquí pasamos un arreglo vacío para que se muestren todos los productos del carrito
-		openCart();
-	});
+    // Botón para limpiar el carrito
+    clearCartButton.addEventListener("click", clearCart);
 
     // Cerrar el carrito haciendo clic fuera del contenido
     cartModal.addEventListener("click", function(event) {
@@ -188,3 +187,4 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
