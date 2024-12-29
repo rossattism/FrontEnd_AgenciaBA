@@ -5,7 +5,6 @@
 <p align="center">
 <img src="https://aulasvirtuales.bue.edu.ar/pluginfile.php/1/theme_academiaba/logo/1734630723/logo_header.jpg" alt="banner" height="100px" /> <br />
 <i> Repository for the final project of the Front End Javascript Course. </i> <br /> <br />
-<a href=""> <img src="https://img.shields.io/badge/lang-en-white" alt="english language badge"></a> 
 </p>
 
 <!-- INTRO: index -->
