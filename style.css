@@ -450,121 +450,121 @@ p {
 /* End About Section */
 
 /* Market Section */
-.market {
-	font-family: 'Helvetica', sans-serif;
-	background-color: #f9f9f9;
-	padding: 20px;
-  }
-  
-  .market header {
-	display: flex;
-	justify-content: space-between;
-	padding: 20px;
-	background-color: #00bcd4;
-	color: white;
-  }
-  
-  .market header .logo h1 {
-	font-size: 1.5rem;
-	margin: 0;
-  }
-  
-  .market header .cart {
-	display: flex;
-	align-items: center;
-  }
-  
-  .market header .cart button {
-	background-color: #0097a7;
-	color: white;
-	padding: 10px;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-  }
-  
-  .market header .cart button:hover {
-	background-color: #007c8b;
-  }
-  
-  .market .product-list {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	gap: 20px;
-  }
-  
-  .market .product-item {
-	background-color: white;
-	border-radius: 8px;
-	padding: 20px;
-	width: 30%;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	text-align: center;
-  }
-  
-  .market .product-item img {
-	width: 100%;
-	height: auto;
-	border-radius: 8px;
-  }
-  
-  .market .product-item h3 {
-	margin: 10px 0;
-  }
-  
-  .market .product-item button {
-	background-color: #00bcd4;
-	color: white;
-	border: none;
-	padding: 10px;
-	border-radius: 5px;
-	cursor: pointer;
-  }
-  
-  .market .product-item button:hover {
-	background-color: #0097a7;
-  }
-  
-  /* Modal del carrito */
-  .market .cart-modal {
-	display: none;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.5);
-	align-items: center;
-	justify-content: center;
-  }
-  
-  .market .cart-modal-content {
-	background-color: white;
-	padding: 20px;
-	border-radius: 8px;
-	width: 400px;
-	text-align: center;
-  }
-  
-  .market .cart-modal-content .cart-total {
-	margin-top: 20px;
-  }
-  
-  .market .cart-modal-content .btn {
-	background-color: #00bcd4;
-	color: white;
-	padding: 10px;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-	margin-top: 10px;
-  }
-  
-  .market .cart-modal-content .btn:hover {
-	background-color: #0097a7;
-  }
-/* End Market Section */
+.market .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;  /* Reducir el gap entre productos */
+    padding: 20px;
+}
+
+.market .product-item {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 30%;  /* Reducir un poco el tamaño para ajustarse mejor */
+    box-sizing: border-box;  /* Asegura que el padding no sobresalga del tamaño */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;  /* Agregar animación */
+}
+
+.market .product-item img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.market .product-item button {
+    background-color: #5f6060;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.market .product-item button:hover {
+    background-color: #222222;
+}
+
+@media screen and (max-width: 768px) {
+    .market .product-item {
+        width: 48%;  /* Ajustar el tamaño para pantallas medianas */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .market .product-item {
+        width: 100%;  /* Para pantallas pequeñas, los productos ocuparán todo el ancho */
+    }
+}
+
+/* Cart Modal */
+.cart-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo más oscuro para destacar el modal */
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Asegurar que el modal esté encima de otros elementos */
+    overflow-y: auto; /* Permitir desplazamiento si el contenido es más largo */
+}
+
+.cart-modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;  /* El modal ocupará más espacio en pantallas pequeñas */
+    max-width: 500px;  /* El tamaño máximo del modal */
+    box-sizing: border-box; /* Evitar que el padding sobresalga */
+    text-align: center;
+    overflow-y: auto;  /* Habilitar scroll si el contenido es largo */
+    max-height: 80vh; /* Limitar la altura para que el modal no ocupe toda la pantalla */
+}
+
+.cart-modal-content .btn {
+    background-color: #00bcd4;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.cart-modal-content .btn:hover {
+    background-color: #0097a7;
+}
+
+.cart-modal-content .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #222;
+}
+
+@media screen and (max-width: 768px) {
+    .cart-modal-content {
+        width: 90%;  /* En pantallas medianas, el modal será más pequeño */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cart-modal-content {
+        width: 95%; /* Para pantallas pequeñas */
+    }
+}
+	
+
 
 /* Contact Section */
 #contact .contact {

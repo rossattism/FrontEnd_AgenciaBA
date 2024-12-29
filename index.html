@@ -174,45 +174,26 @@
   <h1 class="section-title">Market <span>Place</span></h1>
 
   <section class="market">
-    <div class="product-list">
-      <!-- Producto 1 -->
-      <div class="product-item" data-id="1">
-        <img src="producto1.jpg" alt="Producto 1">
-        <h3>Producto 1</h3>
-        <p>Precio: $10.00</p>
-        <button class="add-to-cart">Añadir al carrito</button>
-      </div>
-      <!-- Producto 2 -->
-      <div class="product-item" data-id="2">
-        <img src="producto2.jpg" alt="Producto 2">
-        <h3>Producto 2</h3>
-        <p>Precio: $15.00</p>
-        <button class="add-to-cart">Añadir al carrito</button>
-      </div>
-      <!-- Producto 3 -->
-      <div class="product-item" data-id="3">
-        <img src="producto3.jpg" alt="Producto 3">
-        <h3>Producto 3</h3>
-        <p>Precio: $20.00</p>
-        <button class="add-to-cart">Añadir al carrito</button>
-      </div>
-    </div>
-
-    <!-- Carrito de compras -->
-    <div class="cart-modal" id="cart-modal">
-      <div class="cart-modal-content">
-        <h2>Tu carrito</h2>
-        <div id="cart-items">
-          <!-- Items del carrito aparecerán aquí -->
-        </div>
-        <div class="cart-total">
-          <p>Total: $<span id="total-price">0.00</span></p>
-        </div>
-        <button id="checkout-button" class="btn">Pagar</button>
-        <button id="close-cart" class="btn">Cerrar</button>
-      </div>
+    <div class="product-list" id="product-list">
+      <!-- Products here -->
     </div>
   </section>
+
+  <!-- Modal -->
+  <div class="cart-modal" id="cart-modal">
+    <div class="cart-modal-content">
+      <h2>Tu carrito</h2>
+      <div id="cart-items">
+        <!-- Items -->
+      </div>
+      <div class="cart-total">
+        <p>Total: $<span id="total-price">0.00</span></p>
+      </div>
+      <button id="checkout-button" class="btn">Pagar</button>
+      <button id="close-cart" class="btn">Cerrar</button>
+      <button id="cart-button">Ver Carrito</button>
+    </div>
+  </div>
 
 </section>
 <!-- End Market Section -->
@@ -272,7 +253,7 @@
       <div class="brand">
         <h1><span>S</span>ilvina <span>R</span>ossatti</h1>
       </div>
-      <h2>Thanks for your visit</h2>
+      <h2>Thanks for your visit!</h2>
       <div class="social-icon">
         <div class="social-item">
           <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png" /></a>
@@ -291,7 +272,7 @@
     </div>
   </section>
   <!-- End Footer -->
-  <script src="./app.js"></script>
+  <script src="./script.js"></script>
 </body>
 
 </html>
