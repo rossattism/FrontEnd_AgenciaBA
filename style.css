@@ -528,7 +528,7 @@ p {
 }
 
 .cart-modal-content .btn {
-    background-color: #00bcd4;
+    background-color: #7c7d7d;
     color: white;
     padding: 10px;
     border: none;
@@ -538,7 +538,7 @@ p {
 }
 
 .cart-modal-content .btn:hover {
-    background-color: #0097a7;
+    background-color: #242424;
 }
 
 .cart-modal-content .close-btn {
@@ -563,7 +563,7 @@ p {
         width: 95%; /* Para pantallas pequeñas */
     }
 }
-	
+
 
 
 /* Contact Section */
